@@ -1,17 +1,35 @@
 package com.filmRecomendationService.webApp.Controller;
 
 import com.filmRecomendationService.webApp.DataTransferObjects.RecommendationRequestDTO;
+import com.filmRecomendationService.webApp.Entity.Film;
+import com.filmRecomendationService.webApp.Service.RecommendationService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
-@RequestMapping("api/")
+@RequestMapping(path = "api/", produces = "text/plain;charset=UTF-8")
 @CrossOrigin
 public class APIController {
+    @Autowired
+    private RecommendationService model;
+
+    @GetMapping("recommendationList")
+    List<Film> getRecommendationList(@RequestBody RecommendationRequestDTO request) {
+        return model.handleRecommendationRequest(request);
+    }
+
+    @GetMapping("recommendationString")
+    String getRecommendationString(@RequestBody RecommendationRequestDTO request) {
+        return model.makeStringRecommendation(request, "en");
+    }
 
     @GetMapping("test")
     String testGetFromEndpoint() {
         return "I came to fight for the love of the game, unstoppable!";
     }
+
 
     @GetMapping("testJSON")
     String testGetWithArg(@RequestBody RecommendationRequestDTO request) {
