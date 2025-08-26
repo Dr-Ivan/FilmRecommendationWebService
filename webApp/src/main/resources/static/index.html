@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your personal film advisor</title>
+    <link rel="stylesheet" href="indexStyles.css">
+</head>
+
+<div>
+    <div>
+        <p><b>Hello!</b> </p>
+        <p>Today I will be your personal film advisor.</p>
+    </div>
+
+    <div>
+        <p>You don't know which film to watch in the evening? Or you watched every 
+            interesting one you knew?</p>
+        <p>I can help here. Just tell me your mood and I will send you a bunch of suitable films.
+            You also can specify year of film release and even genre.</p>
+    </div>
+
+    <div>
+        <p>So, just fill the fields below and press the button.</p>
+        <p><b>Your recommendation will be delivered <i>in seconds</i>!</b> </p>
+    </div>
+
+    <div>
+        <div>
+            Today I want to watch a
+            <select>
+                <option value="adventurous">adventurous</option>
+                <option value="chaotic">chaotic</option>
+                <option value="creepy">creepy</option>
+                <option value="dark">dark</option>
+                <option value="darkly-funny">darkly-funny</option>
+                <option value="disturbing">disturbing</option>
+                <option value="emotional">emotional</option>
+                <option value="epic">epic</option>
+                <option value="exciting">exciting</option>
+                <option value="fantastical">fantastical</option>
+                <option value="funny">funny</option>
+                <option value="heartbreaking">heartbreaking</option>
+                <option value="heartwarming">heartwarming</option>
+                <option value="heroic">heroic</option>
+                <option value="hilarious">hilarious</option>
+                <option value="hopeful">hopeful</option>
+                <option value="inspirational">inspirational</option>
+                <option value="intense">intense</option>
+                <option value="joyful">joyful</option>
+                <option value="lonely">lonely</option>
+                <option value="magical">magical</option>
+                <option value="mind-blowing">mind-blowing</option>
+                <option value="musical">musical</option>
+                <option value="mysterious">mysterious</option>
+                <option value="mystical">mystical</option>
+                <option value="nostalgic">nostalgic</option>
+                <option value="philosophical">philosophical</option>
+                <option value="psychological">psychological</option>
+                <option value="rebellious">rebellious</option>
+                <option value="romantic">romantic</option>
+                <option value="self-aware">self-aware</option>
+                <option value="serious">serious</option>
+                <option value="survival">survival</option>
+                <option value="tense">tense</option>
+                <option value="thoughtful">thoughtful</option>
+                <option value="tragic">tragic</option>
+                <option value="vengeful">vengeful</option>
+            </select> film.
+        </div>
+        <div>
+            It should be released between 
+            <input type="number" min="1900" max="2100" value="1900"> 
+            and 
+            <input type ="number" min="1900" max="2100" value="2100">.
+        </div>
+        <div>
+            Show me only films in genre of
+            <select>
+                <option value="любой">any genre</option>
+                <option value="action">action</option>
+                <option value="animation">animation</option>
+                <option value="comedy">comedy</option>
+                <option value="crime">crime</option>
+                <option value="drama">drama</option>
+                <option value="fantasy">fantasy</option>
+                <option value="historical">historical</option>
+                <option value="horror">horror</option>
+                <option value="musical">musical</option>
+                <option value="sci-fi">sci-fi</option>
+                <option value="thriller">thriller</option>
+                <option value="war">war</option>
+            </select>.
+        </div>
+
+
+    </div>
+
+    <div>
+        <button onclick="test()">Find some films for me!</button>
+    </div>
+    <div>
+        <textarea id="responseField" placeholder="Your recommendation will be shown here." readonly></textarea>
+    </div>
+
+
+    <script src="indexScripts.js"></script>
+</body>
+
+</html>
