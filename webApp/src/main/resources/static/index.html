@@ -28,7 +28,7 @@
     <div>
         <div>
             Today I want to watch a
-            <select>
+            <select id="MoodSelector">
                 <option value="adventurous">adventurous</option>
                 <option value="chaotic">chaotic</option>
                 <option value="creepy">creepy</option>
@@ -41,7 +41,6 @@
                 <option value="fantastical">fantastical</option>
                 <option value="funny">funny</option>
                 <option value="heartbreaking">heartbreaking</option>
-                <option value="heartwarming">heartwarming</option>
                 <option value="heroic">heroic</option>
                 <option value="hilarious">hilarious</option>
                 <option value="hopeful">hopeful</option>
@@ -53,14 +52,12 @@
                 <option value="mind-blowing">mind-blowing</option>
                 <option value="musical">musical</option>
                 <option value="mysterious">mysterious</option>
-                <option value="mystical">mystical</option>
                 <option value="nostalgic">nostalgic</option>
                 <option value="philosophical">philosophical</option>
                 <option value="psychological">psychological</option>
                 <option value="rebellious">rebellious</option>
                 <option value="romantic">romantic</option>
                 <option value="self-aware">self-aware</option>
-                <option value="serious">serious</option>
                 <option value="survival">survival</option>
                 <option value="tense">tense</option>
                 <option value="thoughtful">thoughtful</option>
@@ -70,13 +67,13 @@
         </div>
         <div>
             It should be released between 
-            <input type="number" min="1900" max="2100" value="1900"> 
+            <input type="number" min="1900" max="2100" value="1900" id="StartYearField"> 
             and 
-            <input type ="number" min="1900" max="2100" value="2100">.
+            <input type ="number" min="1900" max="2100" value="2100" id="EndYearField">.
         </div>
         <div>
             Show me only films in genre of
-            <select>
+            <select id="GenreSelector">
                 <option value="любой">any genre</option>
                 <option value="action">action</option>
                 <option value="animation">animation</option>
@@ -97,7 +94,7 @@
     </div>
 
     <div>
-        <button onclick="test()">Find some films for me!</button>
+        <button onclick="askRecommendation()">Find some films for me!</button>
     </div>
     <div>
         <textarea id="responseField" placeholder="Your recommendation will be shown here." readonly></textarea>
