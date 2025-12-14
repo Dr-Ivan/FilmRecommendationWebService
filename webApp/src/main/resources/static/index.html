@@ -7,27 +7,21 @@
     <link rel="stylesheet" href="indexStyles.css">
 </head>
 
-<div>
-    <div>
-        <p><b>Hello!</b> </p>
+<body>
+<div class="container">
+
+    <header class="intro">
+        <p><b>Hello!</b></p>
         <p>Today I will be your personal film advisor.</p>
-    </div>
+        <p>You don't know which film to watch tonight? Or have you already seen everything interesting?</p>
+        <p>I can help! Just tell me your mood — optionally also year and genre — and I’ll prepare the best list.</p>
+        <p><b>Your recommendation will be delivered <i>in seconds</i>!</b></p>
+    </header>
 
-    <div>
-        <p>You don't know which film to watch in the evening? Or you watched every 
-            interesting one you knew?</p>
-        <p>I can help here. Just tell me your mood and I will send you a bunch of suitable films.
-            You also can specify year of film release and even genre.</p>
-    </div>
+    <section class="form-section">
 
-    <div>
-        <p>So, just fill the fields below and press the button.</p>
-        <p><b>Your recommendation will be delivered <i>in seconds</i>!</b> </p>
-    </div>
-
-    <div>
-        <div>
-            Today I want to watch a
+        <div class="form-row">
+            <label>Today I want to watch a</label>
             <select id="MoodSelector">
                 <option value="adventurous">adventurous</option>
                 <option value="chaotic">chaotic</option>
@@ -63,16 +57,19 @@
                 <option value="thoughtful">thoughtful</option>
                 <option value="tragic">tragic</option>
                 <option value="vengeful">vengeful</option>
-            </select> film.
+            </select>
+            <span>film.</span>
         </div>
-        <div>
-            It should be released between 
-            <input type="number" min="1900" max="2100" value="1900" id="StartYearField"> 
-            and 
-            <input type ="number" min="1900" max="2100" value="2100" id="EndYearField">.
+
+        <div class="form-row">
+            <label>It should be released between</label>
+            <input type="number" min="1900" max="2100" value="1900" id="StartYearField">
+            <span>and</span>
+            <input type ="number" min="1900" max="2100" value="2100" id="EndYearField">
         </div>
-        <div>
-            Show me only films in genre of
+
+        <div class="form-row">
+            <label>Show me only films in genre of</label>
             <select id="GenreSelector">
                 <option value="любой">any genre</option>
                 <option value="action">action</option>
@@ -87,21 +84,22 @@
                 <option value="sci-fi">sci-fi</option>
                 <option value="thriller">thriller</option>
                 <option value="war">war</option>
-            </select>.
+            </select>
         </div>
 
+    </section>
 
+    <div class="button-wrap">
+        <button class="main-button" onclick="askRecommendation()">Find some films for me!</button>
     </div>
 
-    <div>
-        <button onclick="askRecommendation()">Find some films for me!</button>
-    </div>
-    <div>
-        <textarea id="responseField" placeholder="Your recommendation will be shown here." readonly></textarea>
+    <div class="result-box">
+        <textarea id="responseField" placeholder="Your recommendation will appear here..." readonly></textarea>
     </div>
 
+</div>
 
-    <script src="indexScripts.js"></script>
+<script src="indexScripts.js"></script>
 </body>
 
 </html>
