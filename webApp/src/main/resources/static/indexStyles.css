@@ -1,0 +1,94 @@
+/* ----- Общие стили ----- */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    background: #f5f7fa;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.intro {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.form-section {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 18px;
+    align-items: center;
+    font-size: 17px;
+}
+
+select, input[type="number"] {
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #f8f8f8;
+}
+
+.button-wrap {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.main-button {
+    padding: 14px 30px;
+    font-size: 18px;
+    background: #4f7cff;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.25s;
+}
+
+.main-button:hover {
+    background: #3a63d4;
+}
+
+.result-box textarea {
+    width: 100%;
+    height: 200px;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background: white;
+    resize: vertical;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-button {
+        width: 100%;
+        padding: 16px;
+    }
+
+    input[type="number"], select {
+        width: 100%;
+    }
+}
